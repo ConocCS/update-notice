@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システムアップデートのお知らせ | CONOC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        
+        :root {
+            --conoc-blue: #4A99D0;
+            --charcoal-grey: #52565e;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #ffffff;
+            color: var(--charcoal-grey);
+        }
+
+        /* カスタムカラー設定 */
+        .bg-conoc-blue { background-color: var(--conoc-blue); }
+        .text-conoc-blue { color: var(--conoc-blue); }
+        .border-conoc-blue { border-color: var(--conoc-blue); }
+        
+        .bg-charcoal { background-color: var(--charcoal-grey); }
+        .text-charcoal { color: var(--charcoal-grey); }
+
+        .logo-img {
+            max-height: 28px;
+            width: auto;
+        }
+
+        .section-title-bar {
+            border-left: 5px solid var(--conoc-blue);
+        }
+
+        /* スクリーンショットのイメージを再現 */
+        .header-main {
+            background-color: var(--charcoal-grey);
+            padding: 20px 0;
+        }
+        .header-accent-bar {
+            background-color: var(--conoc-blue);
+            height: 48px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Area (Based on Screenshot) -->
+    <header>
+        <div class="header-main flex justify-center items-center">
+            <img src="conoc-logo.png" alt="CONOC" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+            <span id="logo-text" class="hidden text-white text-xl font-bold tracking-widest italic">CONOC</span>
+        </div>
+        <div class="header-accent-bar shadow-md"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <!-- Title Section -->
+        <div class="mb-16">
+            <div class="flex items-center space-x-2 mb-4 text-conoc-blue font-bold tracking-widest text-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
+                <span>SERVICE UPDATE</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
+                システムアップデートのお知らせ
+            </h1>
+            <div class="flex flex-wrap items-center gap-4">
+                <div class="bg-charcoal text-white px-5 py-2 rounded font-bold">
+                    2026年4月8日（水）実施
+                </div>
+                <p class="text-sm font-medium opacity-70 italic">※メンテナンス中も基本サービスは通常通りご利用いただけます</p>
+            </div>
+        </div>
+
+        <!-- Contents -->
+        <div class="space-y-16">
+            
+            <!-- Category: 機能追加 -->
+            <section>
+                <h2 class="section-title-bar pl-4 text-2xl font-bold mb-8 text-charcoal">機能追加</h2>
+                
+                <div class="grid gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-conoc-blue text-white text-[10px] font-bold px-2 py-0.5 rounded mr-3">UPDATE</span>
+                            <h3 class="font-bold text-lg text-charcoal">追加実装：利便性向上のためのアップデート</h3>
+                        </div>
+                        
+                        <ul class="space-y-4 text-sm leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>書類管理画面での<span class="font-bold text-slate-900">「書類番号」検索</span>を実装。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>見積書一覧での<span class="font-bold text-slate-900">「キーワード検索」</span>を実装。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>請求書に紐付ける見積書に<span class="font-bold text-slate-900">取引日情報</span>を付与。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>見積入力時に粗利率入力中、<span class="font-bold text-slate-900">Enterキー押下で粗利計算結果を反映</span>。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>実行予算表の<span class="font-bold text-slate-900">マイナス数値入力</span>に対応。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>工事エクスポートに<span class="font-bold text-slate-900">「備考」</span>を追加。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Performance & Fixes -->
+            <section class="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+                <h2 class="text-2xl font-bold mb-8 flex items-center">
+                    <span class="bg-charcoal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">Fix</span>
+                    パフォーマンス改善・不具合修正
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="font-bold mb-4 flex items-center text-conoc-blue">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            処理の高速化
+                        </h3>
+                        <p class="text-sm mb-4 opacity-70">
+                            内部処理の最適化により、各画面の表示速度およびCSV出力速度が向上しました。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border border-slate-200 px-2 py-1 rounded text-[11px] font-medium text-slate-500">請求一覧</span>
+                            <span class="bg-white border border-slate-200 px-2 py-1 rounded text-[11px] font-medium text-slate-500">社員CSV</span>
+                            <span class="bg-white border border-slate-200 px-2 py-1 rounded text-[11px] font-medium text-slate-500">日報一覧</span>
+                            <span class="bg-white border border-slate-200 px-2 py-1 rounded text-[11px] font-medium text-slate-500">工程表</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4 flex items-center text-conoc-blue">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            システムの安定化
+                        </h3>
+                        <ul class="text-sm space-y-3 opacity-70">
+                            <li>・各一覧取得時の特定エラー（AttributeError等）を修正</li>
+                            <li>・AIサーバーリクエスト処理の非同期化（最適化）</li>
+                            <li>・工事存在確認ロジックの強化</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-12 border-t border-slate-100 text-center">
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">© 2026 CONOC Inc.</p>
+            <p class="text-slate-500 text-sm">
+                私たちは、現場の皆様の業務がより円滑に進むよう進化を続けます。<br>
+                ご不明な点がございましたら、サポート窓口までお気軽にお問い合わせください。
+            </p>
+        </footer>
+    </main>
+
+</body>
+</html>
