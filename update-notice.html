@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システムアップデートのお知らせ（4/8）</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            padding-left: 10px;
+            border-left: 4px solid #0056b3;
+            background-color: #f0f7ff;
+        }
+        .date {
+            font-weight: bold;
+            color: #e63946;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>システムアップデートのお知らせ</h1>
+    
+    <p>いつも本サービスをご利用いただき、誠にありがとうございます。<br>
+    以下の通り、システムの機能追加および改善を目的としたアップデートを実施いたします。</p>
+
+
+    <p><strong>実施予定日：</strong> <span class="date">2026年4月8日（水）</span></p>
+
+
+    <h2>■ 新機能・機能追加</h2>
+    <ul>
+        <li><strong>書類番号の検索窓</strong>を実装</li>
+        <li><strong>見積キーワード検索窓</strong>を実装</li>
+        <li><strong>インボイス対応</strong>：請求書に紐付ける見積書に取引日情報を付与</li>
+        <li><strong>削除済み工事の見積書</strong>をプレビュー可能に修正</li>
+        <li><strong>資料・写真一覧</strong>にて選択した工事IDが保持されるよう改善</li>
+        <li><strong>工事一覧のCSV出力</strong>に「備考」項目を追加</li>
+        <li><strong>実行予算表</strong>にマイナス入力ができるよう改善</li>
+        <li><strong>見積書の粗利率計算</strong>：エンターキーで他項目へ即時反映</li>
+    </ul>
+
+
+    <h2>■ パフォーマンス改善・修正</h2>
+    <ul>
+        <li><strong>表示・出力の高速化</strong>（N+1問題の解消）：
+            <ul>
+                <li>請求一覧 / 社員情報CSV / 出面一覧 / 日報一覧 / 外注発注書一覧</li>
+            </ul>
+        </li>
+        <li><strong>動作パフォーマンス向上</strong>：
+            <ul>
+                <li>出面管理ガントチャート / カレンダー工程一覧</li>
+            </ul>
+        </li>
+        <li><strong>システムエラー修正</strong>：
+            <ul>
+                <li>工事別請求書一覧 / 工程詳細取得時のエラーを解消</li>
+            </ul>
+        </li>
+        <li><strong>内部処理の最適化</strong>：
+            <ul>
+                <li>AIサーバーリクエストの非同期化 / 工事存在確認ロジックの追加など</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <div class="footer">
+        <p>本アップデートにより、皆様の業務がより円滑に進むよう努めてまいります。<br>
+        今後とも、本サービスをよろしくお願い申し上げます。</p>
+    </div>
+</div>
+
+
+</body>
+</html>
