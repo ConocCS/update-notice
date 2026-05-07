@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システムアップデートのお知らせ | CONOC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+        :root {
+            --conoc-blue: #4A99D0;
+            --charcoal-grey: #52565e;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #ffffff;
+            color: var(--charcoal-grey);
+        }
+
+        .bg-conoc-blue { background-color: var(--conoc-blue); }
+        .text-conoc-blue { color: var(--conoc-blue); }
+        .border-conoc-blue { border-color: var(--conoc-blue); }
+
+        .bg-charcoal { background-color: var(--charcoal-grey); }
+        .text-charcoal { color: var(--charcoal-grey); }
+
+        .logo-img {
+            max-height: 28px;
+            width: auto;
+        }
+
+        .section-title-bar {
+            border-left: 5px solid var(--conoc-blue);
+        }
+
+        .header-main {
+            background-color: var(--charcoal-grey);
+            padding: 20px 0;
+        }
+        .header-accent-bar {
+            background-color: var(--conoc-blue);
+            height: 48px;
+        }
+
+        .card-top-line {
+            border-top: 1.5px solid var(--conoc-blue);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(74, 153, 208, 0.15);
+        }
+        .feature-card {
+            transition: all 0.2s ease;
+        }
+
+        .maintenance-banner {
+            background-color: #fff8ed;
+            border: 1.5px solid #f0c070;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header>
+        <div class="header-main flex justify-center items-center">
+            <img src="conoc-logo.png" alt="CONOC" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+            <span id="logo-text" class="hidden text-white text-xl font-bold tracking-widest italic">CONOC</span>
+        </div>
+        <div class="header-accent-bar shadow-md"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+
+        <!-- Title Section -->
+        <div class="mb-10">
+            <div class="flex items-center space-x-2 mb-4 text-conoc-blue font-bold tracking-widest text-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
+                <span>SERVICE UPDATE</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
+                システムアップデートのお知らせ
+            </h1>
+            <div class="flex flex-wrap items-center gap-4">
+                <div class="bg-charcoal text-white px-5 py-2 rounded font-bold">
+                    2026年5月12日（火）8:00~ 実施予定
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance Notice Banner -->
+        <div class="maintenance-banner px-6 py-5 mb-16 flex items-start gap-4">
+            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path>
+            </svg>
+            <div>
+                <p class="font-bold text-sm text-amber-700 mb-1">メンテナンス中はシステムをご利用いただけません</p>
+                <p class="text-sm text-amber-700 opacity-80">
+                    アップデート作業中はメンテナンスモードに移行するため、CONOCにアクセスいただけない時間帯が発生します。<br>
+                    ご不便をおかけしますが、より良いサービスのためのアップデートとなりますので、ご理解のほどよろしくお願いいたします。
+                </p>
+            </div>
+        </div>
+
+        <!-- Contents -->
+        <div class="space-y-16">
+
+            <!-- Category: セキュリティ・安心への取り組み -->
+            <section>
+                <h2 class="section-title-bar pl-4 text-2xl font-bold mb-8 text-charcoal">セキュリティ・安心への取り組み</h2>
+
+                <div class="grid gap-6">
+                    <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-top-line">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-conoc-blue text-white text-[10px] font-bold px-2 py-0.5 rounded mr-3">SECURITY</span>
+                            <h3 class="font-bold text-lg text-charcoal">アカウントをより安全にお守りするための改善</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                            お客様の工事情報・アカウントをより安全にお守りできるよう、ログインや情報共有の仕組みを見直しました。普段のご利用方法に変更はございませんが、安心してお使いいただくためにご案内しています。
+                        </p>
+
+                        <ul class="space-y-4 text-sm leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>ログイン時の<span class="font-bold text-slate-900">アクセスチェックを強化</span>しました。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p><span class="font-bold text-slate-900">共有リンクが今後も許可した相手だけに届くよう</span>、発行の仕組みを見直しました。</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-conoc-blue mr-3 -mt-1 text-2xl font-bold">・</span>
+                                <p>パスワードを<span class="font-bold text-slate-900">より安全な方法で保管するよう</span>変更しました。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: システム品質・安定化 -->
+            <section class="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+                <h2 class="text-2xl font-bold mb-8 flex items-center">
+                    <span class="bg-charcoal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">Fix</span>
+                    安定性・使いやすさの改善
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="font-bold mb-4 flex items-center text-conoc-blue">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            公開前の動作確認を強化
+                        </h3>
+                        <p class="text-sm leading-relaxed opacity-70">
+                            実際の操作に近い確認作業を公開前に徹底することで、<span class="font-bold opacity-100">不具合が起きにくい体制</span>を整えました。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4 flex items-center text-conoc-blue">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            動作環境を最新版に更新
+                        </h3>
+                        <p class="text-sm leading-relaxed opacity-70">
+                            CONOCを動かす土台となる仕組みを最新の安定版に更新しました。<span class="font-bold opacity-100">動作の安定性がさらに向上</span>します。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4 flex items-center text-conoc-blue">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            エラー時の案内をわかりやすく整理
+                        </h3>
+                        <p class="text-sm leading-relaxed opacity-70">
+                            ログインが切れたときや操作エラーが発生した際の<span class="font-bold opacity-100">案内画面をどの画面でも統一</span>。状況がわかりやすくなります。
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-12 border-t border-slate-100 text-center">
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">© 2026 CONOC Inc.</p>
+            <p class="text-slate-500 text-sm">
+                私たちは、現場の皆様の業務がより円滑に進むよう進化を続けます。<br>
+                ご不明な点がございましたら、サポート窓口までお気軽にお問い合わせください。
+            </p>
+        </footer>
+    </main>
+
+</body>
+</html>
